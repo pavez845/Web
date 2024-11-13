@@ -1,0 +1,154 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A1A1A; /* Fondo negro */
+    color: #FFFFFF; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #d67c91, #464043);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #302828; /* Fondo negro */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #FFC1E3; /* Rosa pastel */
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #FF8FA8; /* Rosa más fuerte para hover */
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+/* Carrusel */
+.carousel {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 50%;
+    height: auto;
+    object-fit: cover; /* Asegura que todas las imágenes se ajusten al contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Botones del Carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+/* Contenedor */
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2C2C2C; /* Fondo gris oscuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF8FA8; /* Rosa pastel oscuro */
+}
+
+.qr-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #FFC1E3; /* Rosa pastel */
+    border-radius: 8px;
+    background-color: #3A3A3A; /* Fondo gris oscuro */
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #000000; /* Fondo negro */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #333333; /* Fondo gris oscuro al pasar el cursor */
+    transform: scale(1.05);
+}
+
+/* Sección Acerca de */
+.about {
+    text-align: center;
+    background-color: #2C2C2C;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: #FF8FA8;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+/* Footer */
+.footer {
+    background-color: #1A1A1A; /* Fondo negro para el footer */
+    color: #FFC1E3; /* Texto rosa pastel */
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #FF8FA8;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

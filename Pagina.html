@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de QR y Botón - Estilo Moderno</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">TeLlevo</a>
+        <div class="navbar-links">
+            <a href="#qr">Generar QR</a>
+            <a href="#about">Acerca de</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Carrusel -->
+
+    <!-- Sección de QR -->
+    <div class="container" id="qr">
+        <h1 class="title">Generador de Código QR - Transporte</h1>
+        <div id="qrcode" class="qr-container"></div>
+        <a href="https://drive.google.com/drive/folders/1kERiFVxru9jZm89f7Whkok3YxcFws50o?usp=sharing" class="btn">Ir a Página</a>
+    </div>
+    <div class="carousel">
+        <div class="carousel-container">
+            <img src="https://s1.1zoom.me/b5050/550/Bentley_Flying_Spur_(Dark_Sapphire)_2019_Motion_605571_1366x768.jpg" alt="Imagen 1">
+            <img src="https://s1.1zoom.me/b5050/855/Lincoln_Nautilus_Black_Label_2018_Wine_color_605627_1366x768.jpg" alt="Imagen 2">
+            <img src="https://s1.1zoom.me/b5050/807/Aurus_Senat_S600_2019_Sedan_Side_Luxury_Russian_605445_1366x768.jpg" alt="Imagen 3">
+            <img src="https://s1.1zoom.me/b4753/141/Volkswagen_2020_ABT_Golf_Black_Metallic_596563_1366x768.jpg" alt="Imagen 4">
+        </div>
+        <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+
+    <!-- Acerca de -->
+    <section class="about" id="about">
+        <h2>Acerca de TeLlevo</h2>
+        <p>TeLlevo es una plataforma que conecta a estudiantes para facilitar su transporte en cualquier horario!. A través de nuestra app, puedes ofrecer o solicitar viajes a tus compañeros de clase.</p>
+    </section>
+
+
+    <!-- Contacto -->
+    <footer class="footer" id="footer">
+        <p>Contacto: <a href="mailto:TeLlevo@gmail.com">TeLlevo@gmail.com</a> | &copy; 2024 TeLLevo</p>
+    </footer>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "https://drive.google.com/drive/folders/1kERiFVxru9jZm89f7Whkok3YxcFws50o?usp=sharing",
+            width: 250,
+            height: 250
+        });
+
+        // Carrusel
+        let currentSlide = 0;
+
+        function moveCarousel(direction) {
+            const slides = document.querySelectorAll(".carousel-container img");
+            const totalSlides = slides.length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            document.querySelector(".carousel-container").style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(() => {
+            moveCarousel(1);
+        }, 3000); // Mueve el carrusel automáticamente cada 3 segundos
+    </script>
+</body>
+</html>
